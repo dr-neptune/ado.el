@@ -1,6 +1,5 @@
 ;;; azure-devops.el --- Azure DevOps integration for Emacs -*- lexical-binding: t; -*-
 
-;; Author: Michael Rose <mrosedatasci@gmail.com>
 ;; Version: 0.5
 ;; Keywords: azure, devops
 
