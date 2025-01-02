@@ -13,18 +13,19 @@ All from the comfort of an Emacs buffer, with an 80s hacker console twist!
 1. Place =azure-devops.el= in your load-path or use a package manager.
 2. Add this to your Emacs config:
 
-  #+BEGIN_SRC emacs-lisp
-    (add-to-list 'load-path "~/path/to/this/package")
-    (setq azure-devops-username "username@email.com")
-    (setq azure-devops-organization-url "https://dev.azure.com/org-name-here/")
-    (setq azure-devops-project-name "")
-    (setq azure-devops-pat "YOUR-PERSONAL-ACCESS-TOKEN")
-
-    (require 'azure-devops)
-
-    ;; Optionally bind the menu to something like "C-c d"
-    (global-set-key (kbd "C-c d") #'azure-devops-menu)
-  #+END_SRC
+#+BEGIN_SRC emacs-lisp
+(use-package azure-devops
+  :if (and (boundp 'my/adoel-path) my/adoel-path)
+  :load-path my/adoel-path
+  :init
+  ;; Provide empty (or real) values for your DevOps variables.
+  (setq azure-devops-username           ""
+        azure-devops-organization-url   ""
+        azure-devops-project-name       ""
+        azure-devops-pat                "")
+  :bind
+  ("C-c d" . azure-devops-menu))
+#+END_SRC
 
 Make sure your Personal Access Token (PAT) has the appropriate scopes (e.g., Work Items: Read/Write).
 
