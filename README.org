@@ -18,7 +18,7 @@ All from the comfort of an Emacs buffer, with an 80s hacker console twist!
   :if (and (boundp 'my/adoel-path) my/adoel-path)
   :load-path my/adoel-path
   :init
-  ;; Provide empty (or real) values for your DevOps variables.
+  ;; Provide values for your DevOps variables.
   (setq azure-devops-username           ""
         azure-devops-organization-url   ""
         azure-devops-project-name       ""
