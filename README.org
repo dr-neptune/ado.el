@@ -4,7 +4,7 @@ This package provides an Emacs interface to Azure DevOps boards. You can:
 - Create new tickets
 - Update existing tickets
 
-All from the comfort of an Emacs buffer, with an 80s hacker console twist!
+All from the comfort of an Emacs buffer.
 
 * 🚨 Warning
 *This library is in extremely early stages.* It modifies data within your Azure DevOps instance, so please use it *at your own risk*.
